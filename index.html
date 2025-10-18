@@ -86,28 +86,19 @@
     <!-- Navigation Bar -->
     <header class="bg-gray-800 shadow-lg fixed top-0 w-full z-50">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between md:justify-end">
-            <!-- Mobile Menu button (A11y Improvement: Added aria-label) -->
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-300 hover:bg-gray-700 transition-colors duration-300" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
 
-            <!-- Navigation Links and theme toggle -->
-            <!-- Simplified mobile menu classes to be handled by JS toggle -->
             <div id="nav-menu" class="hidden md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-lg w-full md:w-auto">
                 <ul class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-lg w-full md:w-auto">
-                    <!-- Links use href="#sectionId" for History API and data-page-target for JS -->
                     <li><a href="#home" data-page-target="home" class="nav-link hover:text-blue-400 transition duration-300 py-2">Home</a></li>
                     <li><a href="#about" data-page-target="about" class="nav-link hover:text-blue-400 transition duration-300 py-2">About</a></li>
-                    <!-- NOTE: Resume link needs to be a valid URL for deployment -->
                     <li><a href="Resume_SJ_.pdf" target="_blank" rel="noopener noreferrer" class="nav-link hover:text-blue-400 transition duration-300 py-2">Resume</a></li>
                     <li><a href="#experience" data-page-target="experience" class="nav-link hover:text-blue-400 transition duration-300 py-2">Experience</a></li>
                     <li><a href="#projects" data-page-target="projects" class="nav-link hover:text-blue-400 transition duration-300 py-2">Projects</a></li>
                     <li><a href="#contact" data-page-target="contact" class="nav-link hover:text-blue-400 transition duration-300 py-2">Contact</a></li>
                 </ul>
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-700 transition-colors duration-300" aria-label="Toggle light and dark theme">
-                    <i class="fas fa-sun text-gray-300 dark:hidden"></i>
-                    <i class="fas fa-moon text-gray-300 hidden dark:block"></i>
-                </button>
             </div>
         </nav>
     </header>
