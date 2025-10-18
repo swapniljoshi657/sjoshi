@@ -81,7 +81,7 @@
 
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 transition-colors duration-500">
+<body class="bg-gray-900 text-gray-100 transition-colors duration-500 dark">
 
     <!-- Navigation Bar -->
 
@@ -91,11 +91,9 @@
             <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg text-gray-300 hover:bg-gray-700 transition-colors duration-300" aria-label="Toggle navigation menu">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
-            <!-- Navigation Links and theme toggle -->
-            <!-- Simplified mobile menu classes to be handled by JS toggle -->
+            <!-- Navigation Links -->
             <div id="nav-menu" class="hidden md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-lg w-full md:w-auto">
                 <ul class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-lg w-full md:w-auto">
-                    <!-- Links use href="#sectionId" for History API and data-page-target for JS -->
                     <li><a href="#home" data-page-target="home" class="nav-link hover:text-blue-400 transition duration-300 py-2">Home</a></li>
                     <li><a href="#about" data-page-target="about" class="nav-link hover:text-blue-400 transition duration-300 py-2">About</a></li>
                     <!-- NOTE: Resume link needs to be a valid URL for deployment -->
@@ -104,10 +102,7 @@
                     <li><a href="#projects" data-page-target="projects" class="nav-link hover:text-blue-400 transition duration-300 py-2">Projects</a></li>
                     <li><a href="#contact" data-page-target="contact" class="nav-link hover:text-blue-400 transition duration-300 py-2">Contact</a></li>
                 </ul>
-                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-700 transition-colors duration-300" aria-label="Toggle light and dark theme">
-                    <i class="fas fa-sun text-gray-300 dark:hidden"></i>
-                    <i class="fas fa-moon text-gray-300 hidden dark:block"></i>
-                </button>
+                <!-- Dark mode toggle removed -->
             </div>
         </nav>
     </header>
@@ -127,17 +122,14 @@
         </section>
 
         <!-- Dynamic Content Sections -->
-        <!-- This container is initially hidden, will be shown when a sub-page is navigated to -->
         <div id="content-pages" class="min-h-screen hidden"> 
             
             <!-- About Section -->
             <section id="about" data-page="about" class="content-section py-20 opacity-0">
                 <div class="container mx-auto px-4 py-8 md:py-12 flex flex-col md:flex-row items-center md:space-x-12">
-                    <!-- Image on the left (on larger screens) -->
                     <div class="md:w-1/3 mb-8 md:mb-0">
                         <img src="https://i.imgur.com/clm6rMS.jpeg" alt="A professional portrait of Swapnil Joshi" class="rounded-lg shadow-xl w-full h-auto">
                     </div>
-                    <!-- Text content on the right -->
                     <div class="md:w-2/3">
                         <h2 class="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 text-gray-900 dark:text-gray-100">ABOUT ME</h2>
                         <p class="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed font-normal text-justify">
@@ -155,21 +147,18 @@
                 <div class="container mx-auto px-4 py-8 md:py-12">
                     <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-gray-100">EXPERIENCE</h2>
                     
-                    <!-- Card layout container is now a 'group' for the hover effect -->
                     <div class="space-y-12 group">
             
-                      <!-- Role 1: Product Design and Development Engineer Intern -->
-                      <!-- Added: transition, group-hover:opacity-70 (fades when mouse is inside the group), and hover:opacity-100 (highlights on hover) -->
+                      <!-- Role 1 -->
                       <div class="experience-card bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-70 hover:opacity-100">
                         <div class="flex items-center space-x-3 mb-3">
                             <i class="fas fa-hammer text-2xl text-blue-500"></i>
                             <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Product Design and Development Engineer Intern</h3>
                         </div>
-                          <!-- Company with logo -->
-                      <div class="flex items-center space-x-2 mb-2">
-                        <img src="https://i.imgur.com/wA1GrbP.png" alt="Manufast logo" class="w-6 h-6 rounded-sm object-contain align-middle -mt-0.5">
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Manufast.in, India | December 2022 – June 2023</p>
-                          </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <img src="https://i.imgur.com/wA1GrbP.png" alt="Manufast logo" class="w-6 h-6 rounded-sm object-contain align-middle -mt-0.5">
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Manufast.in, India | December 2022 – June 2023</p>
+                        </div>
                         <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base space-y-2">
                           <li>Led design optimization efforts resulting in a 15% reduction in material usage, supporting sustainability and improving cost-efficiency.</li>
                           <li>Improved quality control by testing and validating 20+ redesigned product components, reducing defect rates by 10%.</li>
@@ -178,18 +167,16 @@
                         </ul>
                       </div>
             
-                      <!-- Role 2: R&D and Digging System Head -->
-                      <!-- Added: transition, group-hover:opacity-70, and hover:opacity-100 -->
+                      <!-- Role 2 -->
                       <div class="experience-card bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-70 hover:opacity-100">
                         <div class="flex items-center space-x-3 mb-3">
                             <i class="fas fa-flask text-2xl text-green-500"></i>
                             <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">R&D and Digging System Head</h3>
                         </div>
-                          <!-- Company with logo -->
-                      <div class="flex items-center space-x-2 mb-2">
-                        <img src="https://i.imgur.com/tlKr503.png" alt="Manufast logo" class="w-6 h-6 rounded-sm object-contain align-middle -mt-0.5">
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Team MechAgrinics, India | June 2020 – June 2022</p>
-                      </div>
+                        <div class="flex items-center space-x-2 mb-2">
+                            <img src="https://i.imgur.com/tlKr503.png" alt="Manufast logo" class="w-6 h-6 rounded-sm object-contain align-middle -mt-0.5">
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Team MechAgrinics, India | June 2020 – June 2022</p>
+                        </div>
                         <ul class="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 text-sm sm:text-base space-y-2">
                           <li>Conceptualized, designed, and developed an autonomous onion harvesting system aimed at minimizing post-harvest losses and increasing operational efficiency.</li>
                           <li>Engineered the machine for diverse field conditions, optimizing traction, balance, and mechanical adaptability, resulting in a 15% increase in harvesting efficiency.</li>
@@ -200,13 +187,11 @@
                 </div>
             </section>
     
-            
             <!-- Projects Section -->
             <section id="projects" data-page="projects" class="content-section py-20 opacity-0">
                 <div class="container mx-auto px-4 py-8 md:py-12">
                     <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900 dark:text-gray-100">PROJECTS</h2>
             
-                    <!-- Project Grid -->
                     <div class="grid md:grid-cols-2 gap-10">
             
                       <!-- Project 1 -->
@@ -215,11 +200,9 @@
                           Autonomous 360° Fire Extinguisher Robot
                         </h3>
                         <div class="flex flex-col md:flex-row md:space-x-6">
-                          <!-- Image -->
                           <div class="md:w-1/2 mb-4 md:mb-0">
                             <img src="https://i.imgur.com/5XLSyFS.jpeg" alt="Autonomous Fire Extinguisher Robot" class="rounded-lg shadow-lg w-full h-auto">
                           </div>
-                          <!-- Text content -->
                           <div class="md:w-1/2 text-gray-700 dark:text-gray-300">
                             <p class="mb-2"><strong>Objective:</strong> Rapid-response robot to extinguish fires from any angle.</p>
                             <ul class="list-disc list-inside space-y-2 text-sm sm:text-base">
@@ -287,76 +270,76 @@
                 </div>
             </section>
             
-    
-<!-- Contact Section -->
-<section id="contact" data-page="contact" class="content-section py-20 opacity-0">
-  <div class="container mx-auto px-4 py-8 md:py-12">
-      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900 dark:text-gray-100">CONTACT ME</h2>
-    
-        <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-6 mb-12">
-    <a href="mailto:swapniljoshi657@gmail.com" class="p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl text-center hover:bg-gray-200 dark:hover:bg-gray-700 transition w-full sm:w-72 flex flex-col items-center justify-center">
-    <div class="mb-2 text-2xl text-blue-500">
-      <i class="fas fa-envelope"></i>
-    </div>
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Email</h3>
-        <p class="text-gray-600 dark:text-gray-400 break-words">swapniljoshi657@gmail.com</p>
-  </a>
+            <!-- Contact Section -->
+            <section id="contact" data-page="contact" class="content-section py-20 opacity-0">
+              <div class="container mx-auto px-4 py-8 md:py-12">
+                  <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-gray-900 dark:text-gray-100">CONTACT ME</h2>
+                  
+                  <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-6 mb-12">
+                    <a href="mailto:swapniljoshi657@gmail.com" class="p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl text-center hover:bg-gray-200 dark:hover:bg-gray-700 transition w-full sm:w-72 flex flex-col items-center justify-center">
+                      <div class="mb-2 text-2xl text-blue-500">
+                        <i class="fas fa-envelope"></i>
+                      </div>
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Email</h3>
+                      <p class="text-gray-600 dark:text-gray-400 break-words">swapniljoshi657@gmail.com</p>
+                    </a>
 
-    <a href="https://linkedin.com/in/swapniljoshi31" target="_blank" class="p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl text-center hover:bg-gray-200 dark:hover:bg-gray-700 transition w-full sm:w-72 flex flex-col items-center justify-center">
-    <div class="mb-2 text-2xl text-blue-500">
-      <i class="fab fa-linkedin"></i>
-    </div>
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">LinkedIn</h3>
-        <p class="text-gray-600 dark:text-gray-400 break-words">linkedin.com/in/swapniljoshi31</p>
-  </a>
-</div>
-        <div class="flex items-center justify-center my-12">
-      <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
-      <span class="px-4 text-gray-600 dark:text-gray-400 font-medium">OR</span>
-      <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
-    </div>
+                    <a href="https://linkedin.com/in/swapniljoshi31" target="_blank" class="p-6 bg-gray-100 dark:bg-gray-800 rounded-2xl text-center hover:bg-gray-200 dark:hover:bg-gray-700 transition w-full sm:w-72 flex flex-col items-center justify-center">
+                      <div class="mb-2 text-2xl text-blue-500">
+                        <i class="fab fa-linkedin"></i>
+                      </div>
+                      <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">LinkedIn</h3>
+                      <p class="text-gray-600 dark:text-gray-400 break-words">linkedin.com/in/swapniljoshi31</p>
+                    </a>
+                  </div>
 
-<div class="flex flex-col md:flex-row md:gap-12 justify-center items-start space-y-8 md:space-y-0">
-    <div class="md:w-1/2 text-left">
-        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 uppercase">
-            CONTACT ME DIRECTLY >
-        </h2>
-    </div>
+                  <div class="flex items-center justify-center my-12">
+                    <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+                    <span class="px-4 text-gray-600 dark:text-gray-400 font-medium">OR</span>
+                    <div class="h-px bg-gray-300 dark:bg-gray-700 flex-grow"></div>
+                  </div>
 
-    <form action="https://formspree.io/f/xeordqqo" method="POST" class="w-full md:w-1/2 space-y-4">
-        <div class="flex space-x-4">
-            <div class="w-1/2">
-                <label for="first-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">First Name <span class="text-red-500">*</span></label>
-                <input type="text" id="first-name" name="first-name" required
-                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            </div>
-            <div class="w-1/2">
-                <label for="last-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Last Name <span class="text-red-500">*</span></label>
-                <input type="text" id="last-name" name="last-name" required
-                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-            </div>
-        </div>
+                  <div class="flex flex-col md:flex-row md:gap-12 justify-center items-start space-y-8 md:space-y-0">
+                    <div class="md:w-1/2 text-left">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 uppercase">
+                            CONTACT ME DIRECTLY >
+                        </h2>
+                    </div>
 
-        <div>
-            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email <span class="text-red-500">*</span></label>
-            <input type="email" id="email" name="email" required
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
-        </div>
+                    <form action="https://formspree.io/f/xeordqqo" method="POST" class="w-full md:w-1/2 space-y-4">
+                        <div class="flex space-x-4">
+                            <div class="w-1/2">
+                                <label for="first-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">First Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="first-name" name="first-name" required
+                                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            </div>
+                            <div class="w-1/2">
+                                <label for="last-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Last Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="last-name" name="last-name" required
+                                    class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                            </div>
+                        </div>
 
-        <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message <span class="text-red-500">*</span></label>
-            <textarea id="message" name="message" rows="4" required
-                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
-        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email <span class="text-red-500">*</span></label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none">
+                        </div>
 
-        <button type="submit"
-            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors duration-300">
-            Send
-        </button>
-    </form>
-    </div>
-  </div>
-</section>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message <span class="text-red-500">*</span></label>
+                            <textarea id="message" name="message" rows="4" required
+                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md transition-colors duration-300">
+                            Send
+                        </button>
+                    </form>
+                  </div>
+              </div>
+            </section>
         </div>
     </main>
 
@@ -368,55 +351,17 @@
     </footer>
     
     <script>
-        const themeToggle = document.getElementById('theme-toggle');
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const navMenu = document.getElementById('nav-menu');
-        const body = document.body;
-
-        const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-        // Function to set the theme
-        function setTheme(isDark) {
-            if (isDark) {
-                // Ensure text and background classes are correctly toggled for a dark theme
-                body.classList.remove('bg-gray-100', 'text-gray-900');
-                body.classList.add('bg-gray-900', 'text-gray-100', 'dark');
-            } else {
-                // Ensure text and background classes are correctly toggled for a light theme
-                body.classList.remove('bg-gray-900', 'text-gray-100', 'dark');
-                body.classList.add('bg-gray-100', 'text-gray-900');
-            }
-        }
-
-        // Check for saved theme in localStorage or system preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            setTheme(savedTheme === 'dark');
-        } else {
-            setTheme(prefersDarkScheme.matches);
-        }
-
-        // Add event listener to the toggle button
-        themeToggle.addEventListener('click', () => {
-            if (body.classList.contains('dark')) {
-                setTheme(false);
-                localStorage.setItem('theme', 'light');
-            } else {
-                setTheme(true);
-                localStorage.setItem('theme', 'dark');
-            }
-        });
 
         // Function to toggle the mobile menu state (Simplified with grouped classes)
         function toggleMobileMenu() {
-            // Toggles the `hidden` class and the custom `mobile-menu-open` class defined in CSS
             navMenu.classList.toggle('hidden');
             navMenu.classList.toggle('mobile-menu-open');
         }
 
         // Add event listener to the mobile menu button
         mobileMenuButton.addEventListener('click', toggleMobileMenu);
-
 
         // Set the current year in the footer
         document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -431,41 +376,29 @@
         const STAGGER_DELAY_MS = 400; 
 
         function showPage(pageId, shouldUpdateHistory = true) {
-            // Find the target element ID
             const targetElementId = pageId === 'home' ? 'home' : pageId;
 
-            // Update browser history (History API Improvement)
             if (shouldUpdateHistory) {
-                // Use a simple hash for routing
                 const hash = pageId === 'home' ? '' : `#${pageId}`;
                 history.pushState({ page: pageId }, '', hash);
             }
 
-            // Determine if the content container should be visible
             if (pageId === 'home') {
                 contentPagesContainer.classList.add('hidden');
                 homeSection.classList.remove('hidden');
-                // Scroll to top for the Home page
                 window.scrollTo({ top: 0, behavior: 'smooth' }); 
                 return;
             }
 
-            // Show the content container and hide home
             homeSection.classList.add('hidden');
             contentPagesContainer.classList.remove('hidden');
 
-            // Hide all pages with a fade-out effect
             contentPages.forEach(page => {
-                // Find all potential animated elements (now using the specific class 'experience-card')
                 const animatedElements = page.querySelectorAll('.experience-card');
                 
-                // CRITICAL: Reset the animation state before hiding
                 animatedElements.forEach(el => {
-                    // 1. Remove the animation class if it ran
                     el.classList.remove('animate-fade-in'); 
-                    // 2. Add the Tailwind utility class to make it invisible again
                     el.classList.add('opacity-0'); 
-                    // 3. Reset the group hover opacity state (important for a clean reset)
                     el.classList.add('group-hover:opacity-70');
                     el.classList.add('hover:opacity-100');
                 });
@@ -475,45 +408,34 @@
                 page.classList.add('opacity-0');
             });
             
-            // Show the selected page with a fade-in effect
             const targetPage = document.querySelector(`[data-page="${pageId}"]`);
             if (targetPage) {
                 targetPage.classList.remove('hidden');
 
-                // NEW LOGIC: Trigger staggered animation for the experience page
                 if (pageId === 'experience') {
-                    // Find all animated elements (the experience cards)
                     const animatedElements = targetPage.querySelectorAll('.experience-card');
                     animatedElements.forEach((el, index) => {
-                        // Remove the group hover classes temporarily while fading in to prevent conflict
                         el.classList.remove('group-hover:opacity-70');
                         el.classList.remove('hover:opacity-100');
 
-                        // 1. Remove the static hidden state (opacity-0)
                         el.classList.remove('opacity-0'); 
                         
-                        // 2. Add delay logic
                         const delay = index * STAGGER_DELAY_MS; 
 
                         setTimeout(() => {
-                            // Force repaint/reflow to reset animation state
                             void el.offsetWidth; 
-                            
-                            // 3. Add the class to start the animation
                             el.classList.add('animate-fade-in'); 
 
-                            // Re-apply the group hover classes after animation is expected to finish
                             setTimeout(() => {
                                 el.classList.add('group-hover:opacity-70');
                                 el.classList.add('hover:opacity-100');
-                            }, 1000); // 1.0s is the animation duration
+                            }, 1000);
                         }, delay);
                     });
                 }
 
                 setTimeout(() => {
                     targetPage.classList.add('opacity-100');
-                    // Scroll to the top of the content area
                     window.scrollTo({ top: document.querySelector('main').offsetTop, behavior: 'smooth' });
                 }, 10); 
             }
@@ -521,17 +443,11 @@
 
         // Click handler for navigation links
         navLinks.forEach(link => {
-            // Only attach click handler to links that have a data-page-target
             if (link.hasAttribute('data-page-target')) {
                 link.addEventListener('click', (event) => {
-                    // Prevent default anchor jump 
                     event.preventDefault(); 
-                    
                     const pageId = event.target.getAttribute('data-page-target');
-                    // showPage handles the logic for Home/Content sections
                     showPage(pageId); 
-                    
-                    // Collapse the menu on link click if it's currently visible on mobile
                     if (!navMenu.classList.contains('hidden') && window.innerWidth < 768) {
                         toggleMobileMenu();
                     }
@@ -539,26 +455,19 @@
             }
         });
 
-        // Handle browser back/forward buttons (History API Improvement)
-        window.addEventListener('popstate', (event) => {
-            const hash = window.location.hash.substring(1); // Get hash without '#'
-            const pageId = hash || 'home'; // Default to 'home' if hash is empty
-
-            // Show the page without pushing a new state to history
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.substring(1);
+            const pageId = hash || 'home';
             showPage(pageId, false); 
         });
 
-        // Initial load logic (Reads the hash from the URL)
-        function initialLoad() {
-            const hash = window.location.hash.substring(1); // Get hash without '#'
+        // Initial load
+        (function initialLoad() {
+            const hash = window.location.hash.substring(1);
             const pageId = hash || 'home'; 
-
-            // Show the correct page on initial load
             showPage(pageId, false); 
-        }
-
-        // Run initial load function
-        initialLoad();
+        })();
     </script>
 </body>
 </html>
