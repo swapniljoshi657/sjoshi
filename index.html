@@ -23,7 +23,6 @@
       position: relative;
     }
 
-    /* Dark overlay for readability */
     .hero-bg::before {
       content: '';
       position: absolute;
@@ -34,7 +33,6 @@
       background-color: rgba(0, 0, 0, 0.55);
     }
 
-    /* Fade-up animation (already used) */
     .fade-in-up { animation: fadeInUp 1.5s ease-out forwards; opacity: 0; }
     .fade-in-up-delay { animation: fadeInUp 1.5s ease-out 0.5s forwards; opacity: 0; }
 
@@ -43,7 +41,17 @@
       to { transform: translateY(0); opacity: 1; }
     }
 
-    /* About Section Animations */
+    /* ✅ Simple fade-in animation for experience cards */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+      opacity: 0;
+    }
+
     @keyframes fadeInLeft {
       from { opacity: 0; transform: translateX(-40px); }
       to { opacity: 1; transform: translateX(0); }
@@ -131,58 +139,58 @@
 
       <!-- Experience -->
       <section id="experience" data-page="experience" class="content-section py-20 opacity-0">
-  <div class="container mx-auto px-4 py-8 md:py-12">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">EXPERIENCE</h2>
+        <div class="container mx-auto px-4 py-8 md:py-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">EXPERIENCE</h2>
 
-    <div class="space-y-12 group">
+          <div class="space-y-12 group">
 
-      <!-- CARD 1 -->
-      <div class="experience-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-70 hover:opacity-100">
-        <div class="flex items-center space-x-3 mb-3">
-          <i class="fas fa-hammer text-2xl text-blue-500"></i>
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Product Design and Development Engineer Intern</h3>
-        </div>
-        <div class="flex items-center space-x-2 mb-4">
-          <img src="https://i.imgur.com/wA1GrbP.png" alt="Manufast logo" class="w-6 h-6 rounded-sm object-contain">
-          <p class="text-sm text-gray-600">Manufast.in, India | Dec 2022 – Jun 2023</p>
-        </div>
-        <ul class="list-disc list-inside mt-2 text-gray-700 text-base space-y-2 leading-relaxed">
-          <li>Led optimization initiatives that cut material usage by 15%, enhancing both cost efficiency and sustainability.</li>
-          <li>Validated 20+ redesigned components through tolerance stack-up and FEA analysis, reducing defect rate by 10%.</li>
-          <li>Improved production workflows by redesigning jigs and fixtures, reducing assembly time by 20%.</li>
-          <li>Collaborated with suppliers to address design-for-manufacturing challenges and ensure dimensional consistency.</li>
-          <li>Created detailed 3D models and GD&T drawings using SolidWorks and Creo, ensuring ISO-compliant documentation.</li>
-          <li>Assisted in prototype testing and performance validation to verify design intent prior to mass production.</li>
-          <li>Documented engineering changes and supported the implementation of continuous improvement processes.</li>
-          <li>Presented findings to senior engineers, contributing to data-driven product quality enhancements of 30%.</li>
-        </ul>
-      </div>
+            <!-- CARD 1 -->
+            <div class="experience-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-70 hover:opacity-100">
+              <div class="flex items-center space-x-3 mb-3">
+                <i class="fas fa-hammer text-2xl text-blue-500"></i>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Product Design and Development Engineer Intern</h3>
+              </div>
+              <div class="flex items-center space-x-2 mb-4">
+                <img src="https://i.imgur.com/wA1GrbP.png" alt="Manufast logo" class="w-6 h-6 rounded-sm object-contain">
+                <p class="text-sm text-gray-600">Manufast.in, India | Dec 2022 – Jun 2023</p>
+              </div>
+              <ul class="list-disc list-inside mt-2 text-gray-700 text-base space-y-2 leading-relaxed">
+                <li>Led optimization initiatives that cut material usage by 15%, enhancing both cost efficiency and sustainability.</li>
+                <li>Validated 20+ redesigned components through tolerance stack-up and FEA analysis, reducing defect rate by 10%.</li>
+                <li>Improved production workflows by redesigning jigs and fixtures, reducing assembly time by 20%.</li>
+                <li>Collaborated with suppliers to address design-for-manufacturing challenges and ensure dimensional consistency.</li>
+                <li>Created detailed 3D models and GD&T drawings using SolidWorks and Creo, ensuring ISO-compliant documentation.</li>
+                <li>Assisted in prototype testing and performance validation to verify design intent prior to mass production.</li>
+                <li>Documented engineering changes and supported the implementation of continuous improvement processes.</li>
+                <li>Presented findings to senior engineers, contributing to data-driven product quality enhancements of 30%.</li>
+              </ul>
+            </div>
 
-      <!-- CARD 2 -->
-      <div class="experience-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-70 hover:opacity-100">
-        <div class="flex items-center space-x-3 mb-3">
-          <i class="fas fa-flask text-2xl text-green-500"></i>
-          <h3 class="text-xl sm:text-2xl font-bold text-gray-900">R&D and Digging System Head</h3>
-        </div>
-        <div class="flex items-center space-x-2 mb-4">
-          <img src="https://i.imgur.com/tlKr503.png" alt="Team MechAgrinics logo" class="w-6 h-6 rounded-sm object-contain">
-          <p class="text-sm text-gray-600">Team MechAgrinics, India | Jun 2020 – Jun 2022</p>
-        </div>
-        <ul class="list-disc list-inside mt-2 text-gray-700 text-base space-y-2 leading-relaxed">
-          <li>Led the R&D team for an autonomous onion harvester from concept to prototype, integrating mechanical and control systems.</li>
-          <li>Engineered the digging mechanism for diverse soil conditions, improving field adaptability and traction by 15%.</li>
-          <li>Automated digging and lifting functions through chain–sprocket and hydraulic systems, reducing manual labor by 20%.</li>
-          <li>Directed a 15-member interdisciplinary team handling CAD design, simulation, fabrication, and testing phases.</li>
-          <li>Performed structural and stress analysis using ANSYS to validate the frame under field-load conditions.</li>
-          <li>Optimized the weight-to-strength ratio and transmission system, improving efficiency and stability on rough terrain.</li>
-          <li>Presented at national-level competitions, securing AIR 5 and winning the “Best Design Award.”</li>
-          <li>Collaborated with mentors to align system performance goals with real-world agricultural challenges.</li>
-        </ul>
-      </div>
+            <!-- CARD 2 -->
+            <div class="experience-card bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-70 hover:opacity-100">
+              <div class="flex items-center space-x-3 mb-3">
+                <i class="fas fa-flask text-2xl text-green-500"></i>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900">R&D and Digging System Head</h3>
+              </div>
+              <div class="flex items-center space-x-2 mb-4">
+                <img src="https://i.imgur.com/tlKr503.png" alt="Team MechAgrinics logo" class="w-6 h-6 rounded-sm object-contain">
+                <p class="text-sm text-gray-600">Team MechAgrinics, India | Jun 2020 – Jun 2022</p>
+              </div>
+              <ul class="list-disc list-inside mt-2 text-gray-700 text-base space-y-2 leading-relaxed">
+                <li>Led the R&D team for an autonomous onion harvester from concept to prototype, integrating mechanical and control systems.</li>
+                <li>Engineered the digging mechanism for diverse soil conditions, improving field adaptability and traction by 15%.</li>
+                <li>Automated digging and lifting functions through chain–sprocket and hydraulic systems, reducing manual labor by 20%.</li>
+                <li>Directed a 15-member interdisciplinary team handling CAD design, simulation, fabrication, and testing phases.</li>
+                <li>Performed structural and stress analysis using ANSYS to validate the frame under field-load conditions.</li>
+                <li>Optimized the weight-to-strength ratio and transmission system, improving efficiency and stability on rough terrain.</li>
+                <li>Presented at national-level competitions, securing AIR 5 and winning the “Best Design Award.”</li>
+                <li>Collaborated with mentors to align system performance goals with real-world agricultural challenges.</li>
+              </ul>
+            </div>
 
-    </div>
-  </div>
-</section>
+          </div>
+        </div>
+      </section>
 
     <!-- Projects Section --> 
       <section id="projects" data-page="projects" class="content-section py-20 opacity-0"> 
@@ -326,7 +334,6 @@
     const contentPagesContainer = document.getElementById('content-pages');
     const homeSection = document.getElementById('home');
     const contentPages = document.querySelectorAll('#content-pages .content-section');
-    const STAGGER_DELAY_MS = 400; 
 
     function showPage(pageId, shouldUpdateHistory = true) {
       const targetId = pageId === 'home' ? 'home' : pageId;
@@ -357,16 +364,22 @@
       const targetPage = document.querySelector(`[data-page="${pageId}"]`);
       if (targetPage) {
         targetPage.classList.remove('hidden');
+
+        if (pageId === 'about') {
+          const img = targetPage.querySelector('.fade-in-left');
+          const text = targetPage.querySelector('.fade-in-right');
+          img.style.animationPlayState = 'running';
+          text.style.animationPlayState = 'running';
+        }
+
+        /* ✅ Simple fade-in for experience section */
         if (pageId === 'experience') {
           const animated = targetPage.querySelectorAll('.experience-card');
-          animated.forEach((el, index) => {
-            const delay = index * STAGGER_DELAY_MS;
-            setTimeout(() => {
-              void el.offsetWidth;
-              el.classList.add('animate-fade-in');
-            }, delay);
+          animated.forEach(el => {
+            el.classList.add('animate-fade-in');
           });
         }
+
         setTimeout(() => {
           targetPage.classList.add('opacity-100');
           window.scrollTo({ top: document.querySelector('main').offsetTop, behavior: 'smooth' });
